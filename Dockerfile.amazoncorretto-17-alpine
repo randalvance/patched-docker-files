@@ -1,0 +1,6 @@
+FROM amazoncorretto:17-alpine
+
+# Download mockserver-netty-5.14.0-shaded.jar from https://www.mock-server.com/where/downloads.html
+COPY mockserver-netty-5.14.0-shaded.jar /app/mockserver-netty-5.14.0-shaded.jar
+
+ENTRYPOINT ["java", "-jar", "/app/mockserver-netty-5.14.0-shaded.jar", "-serverPort", "1080"]

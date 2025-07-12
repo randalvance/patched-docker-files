@@ -1,0 +1,6 @@
+FROM gvenzl/oracle-xe:18-slim-faststart
+
+USER root
+RUN microdnf update
+
+USER oracle
